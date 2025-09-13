@@ -1,0 +1,8 @@
+# venv
+.venv/
+
+# ruff cache
+.ruff_cache/
+
+# pycache
+__pycache__/
