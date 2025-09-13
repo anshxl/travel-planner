@@ -1,5 +1,12 @@
 # test_run.py
 from agents.crew_setup import build_travel_crew
+from dotenv import load_dotenv
+load_dotenv()  # automatically loads variables from .env
+
+import os
+api_key = os.getenv("ANTHROPIC_API_KEY")
+if not api_key:
+    raise ValueError("Missing Anthropic API key")
 
 if __name__ == "__main__":
     crew = build_travel_crew()
